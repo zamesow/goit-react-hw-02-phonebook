@@ -17,14 +17,20 @@ class App extends Component {
       id: shortid.generate(),
     };
 
+    // return contact
+    this.setState(({ contacts }) => ({
+      contacts: [contact, ...contacts],
+    }));
     console.log(contact);
+    console.log(this.state);
   };
 
   render() {
+    const { contacts } = this.state;
     return (
       <>
         <PhoneBookEditor onSubmitProp={this.formSubmitHandler} />
-        <Contacts />
+        <Contacts title="Contacts" contacts={contacts} />
       </>
     );
   }

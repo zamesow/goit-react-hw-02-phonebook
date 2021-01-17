@@ -1,9 +1,10 @@
 import React from 'react';
 import './Contacts.css';
 
-const Contacts = ({ name }) => (
+const Contacts = ({ title, contacts }) => (
   <div>
-    <label>{name}</label>
+    <h2>{title}</h2>
+    <p>{contacts}</p>
   </div>
 );
 
