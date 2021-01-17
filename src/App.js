@@ -17,7 +17,7 @@ class App extends Component {
       id: shortid.generate(),
     };
 
-    // return contact
+    // FIXME: не понимаю как заполнить массив контактов для отображения
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
