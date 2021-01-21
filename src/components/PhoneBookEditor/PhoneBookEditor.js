@@ -14,7 +14,7 @@ class PhoneBookEditor extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onSubmitProp(this.state.name);
+    this.props.onSubmitProp(this.state);
 
     this.reset();
   };

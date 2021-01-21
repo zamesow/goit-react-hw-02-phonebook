@@ -1,11 +1,17 @@
 import React from 'react';
 import './Contacts.css';
 
-const Contacts = ({ title, contacts }) => (
-  <div>
-    <h2>{title}</h2>
-    <p>{contacts}</p>
-  </div>
-);
+function Contacts({ title, contactsProp }) {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <ul>
+        {contactsProp.map(contact => {
+          <li key={contact.id}>{contact.name}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
 
 export default Contacts;
