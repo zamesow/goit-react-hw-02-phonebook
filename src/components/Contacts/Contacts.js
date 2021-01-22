@@ -7,9 +7,7 @@ function Contacts({ title, contactsProp }) {
       <h2>{title}</h2>
       <ul>
         {contactsProp.map(contact => {
-          return (
-            <li key={contact.id}>{contact.name}</li>
-          );
+          return <li key={contact.id}>{contact.name}</li>;
         })}
       </ul>
     </div>
