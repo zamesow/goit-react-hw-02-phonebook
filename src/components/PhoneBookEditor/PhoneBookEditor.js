@@ -4,11 +4,17 @@ import './PhoneBookEditor.css';
 class PhoneBookEditor extends Component {
   state = {
     name: '',
+    number: '',
   };
 
-  handleInputChange = e => {
+  handleNameChange = e => {
     const { value } = e.currentTarget;
     this.setState({ name: value });
+  };
+
+  handlePhoneChange = e => {
+    const { value } = e.currentTarget;
+    this.setState({ number: value });
   };
 
   handleSubmit = e => {
@@ -20,7 +26,7 @@ class PhoneBookEditor extends Component {
   };
 
   reset = () => {
-    this.setState({ name: '' });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
@@ -34,7 +40,16 @@ class PhoneBookEditor extends Component {
               className="PhoneBookEditor__text"
               type="text"
               value={this.state.name}
-              onChange={this.handleInputChange}
+              onChange={this.handleNameChange}
+            />
+          </label>
+          <label className="PhoneBookEditor__subtitle">
+            Number
+            <input
+              className="PhoneBookEditor__text"
+              type="text"
+              value={this.state.number}
+              onChange={this.handlePhoneChange}
             />
           </label>
           <button type="submit">Add contact</button>

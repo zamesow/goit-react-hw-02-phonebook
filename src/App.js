@@ -9,15 +9,14 @@ class App extends Component {
   state = {
     contacts: [],
     name: '',
+    number: '',
   };
 
-  formSubmitHandler = submitName => {
+  formSubmitHandler = data => {
     this.setState(prevState => ({
-      contacts: [
-        { ...submitName, id: shortid.generate() },
-        ...prevState.contacts,
-      ],
+      contacts: [{ ...data, id: shortid.generate() }, ...prevState.contacts],
     }));
+    console.log(data);
   };
 
   render() {

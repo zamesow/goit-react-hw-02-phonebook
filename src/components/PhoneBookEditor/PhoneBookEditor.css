@@ -1,16 +1,18 @@
 .PhoneBookEditor {
   width: 300px;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
 }
 
 .PhoneBookEditor__form {
+  margin: 5px;
   padding: 20px;
   border: 1px solid black;
 }
 
 .PhoneBookEditor__title {
+  margin: 5px;
   line-height: 28px;
 }
 
