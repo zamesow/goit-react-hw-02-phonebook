@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 const Filter = ({ value, filterProp }) => (
-  <label className="PhoneBookEditor">
+  <label className="ContactForm">
     Find contacts by name
     <input
-      className="PhoneBookEditor__text"
+      className="ContactForm__text"
       type="text"
       value={value}
       onChange={filterProp}

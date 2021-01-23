@@ -1,12 +1,11 @@
 import React from 'react';
-import './Contacts.css';
+import './ContactList.css';
 
-function Contacts({ title, contactsProp, children }) {
+function ContactList({ title, contactsProp, children }) {
   return (
-    <div className="PhoneBookEditor">
-      <h2 className="PhoneBookEditor__title">{title}</h2>
+    <div className="ContactForm">
       {children}
-      <ul className="Contacts__form">
+      <ul className="ContactList__form">
         {contactsProp.map(contact => {
           return (
             <li key={contact.id}>
@@ -19,4 +18,4 @@ function Contacts({ title, contactsProp, children }) {
   );
 }
 
-export default Contacts;
+export default ContactList;

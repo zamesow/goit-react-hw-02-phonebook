@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import PhoneBookEditor from './components/PhoneBookEditor';
-import Contacts from './components/Contacts';
+import ContactForm from './components/ContactForm';
+import Contacts from './components/ContactList';
 import Filter from './components/Filter';
 import './App.css';
 
@@ -50,9 +50,11 @@ class App extends Component {
 
     return (
       <>
-        <h1 className="PhoneBook__title">Phonebook</h1>
-        <PhoneBookEditor onSubmitProp={this.formSubmitHandler} />
-        <Contacts title="Contacts" contactsProp={this.getVisibleContacts()}>
+        <h1 className="title">Phonebook</h1>
+        <ContactForm onSubmitProp={this.formSubmitHandler} />
+
+        <h2 className="title">Contacts</h2>
+        <Contacts contactsProp={this.getVisibleContacts()}>
           <Filter value={filter} filterProp={this.changeFilter} />
         </Contacts>
       </>

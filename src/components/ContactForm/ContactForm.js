@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './PhoneBookEditor.css';
+import './ContactForm.css';
 
-class PhoneBookEditor extends Component {
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
@@ -31,21 +31,21 @@ class PhoneBookEditor extends Component {
 
   render() {
     return (
-      <div className="PhoneBookEditor">
-        <form className="PhoneBookEditor__form" onSubmit={this.handleSubmit}>
-          <label className="PhoneBookEditor__subtitle">
+      <div className="ContactForm">
+        <form className="ContactForm__form" onSubmit={this.handleSubmit}>
+          <label className="ContactForm__subtitle">
             Name
             <input
-              className="PhoneBookEditor__text"
+              className="ContactForm__text"
               type="text"
               value={this.state.name}
               onChange={this.handleNameChange}
             />
           </label>
-          <label className="PhoneBookEditor__subtitle">
+          <label className="ContactForm__subtitle">
             Number
             <input
-              className="PhoneBookEditor__text"
+              className="ContactForm__text"
               type="text"
               value={this.state.number}
               onChange={this.handlePhoneChange}
@@ -58,4 +58,4 @@ class PhoneBookEditor extends Component {
   }
 }
 
-export default PhoneBookEditor;
+export default ContactForm;
