@@ -32,7 +32,6 @@ class PhoneBookEditor extends Component {
   render() {
     return (
       <div className="PhoneBookEditor">
-        <h1 className="PhoneBookEditor__title">Phonebook</h1>
         <form className="PhoneBookEditor__form" onSubmit={this.handleSubmit}>
           <label className="PhoneBookEditor__subtitle">
             Name

@@ -13,8 +13,6 @@ class App extends Component {
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
-    name: '',
-    number: '',
     filter: '',
   };
 
@@ -52,6 +50,7 @@ class App extends Component {
 
     return (
       <>
+        <h1 className="PhoneBook__title">Phonebook</h1>
         <PhoneBookEditor onSubmitProp={this.formSubmitHandler} />
         <Contacts title="Contacts" contactsProp={this.getVisibleContacts()}>
           <Filter value={filter} filterProp={this.changeFilter} />
