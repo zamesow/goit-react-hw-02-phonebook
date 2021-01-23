@@ -1,9 +1,9 @@
 import React from 'react';
-import './ContactList.css';
+import './ContactList.module.css';
 
 function ContactList({ contactsProp, onDeleteProp, children }) {
   return (
-    <div className="ContactForm">
+    <div className="ContactList">
       {children}
       <ul className="ContactList__form">
         {contactsProp.map(({ id, number, name }) => {

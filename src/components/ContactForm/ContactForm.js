@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ContactForm.css';
+import './ContactForm.module.css';
 
 class ContactForm extends Component {
   state = {

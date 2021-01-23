@@ -1,3 +1,10 @@
+.ContactList {
+  width: 300px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
 .ContactList__form {
   width: 300px;
   margin-top: 5px;
