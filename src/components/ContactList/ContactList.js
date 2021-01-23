@@ -10,6 +10,7 @@ function ContactList({ title, contactsProp, children }) {
           return (
             <li key={contact.id}>
               {contact.name}: {contact.number}
+              <button>Delete</button>
             </li>
           );
         })}
