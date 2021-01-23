@@ -1,16 +1,22 @@
 import React from 'react';
 import './ContactList.css';
 
-function ContactList({ title, contactsProp, children }) {
+function ContactList({ contactsProp, onDeleteProp, children }) {
   return (
     <div className="ContactForm">
       {children}
       <ul className="ContactList__form">
-        {contactsProp.map(contact => {
+        {contactsProp.map(({ id, number, name }) => {
           return (
-            <li key={contact.id}>
-              {contact.name}: {contact.number}
-              <button>Delete</button>
+            <li key={id} className="contact">
+              {name}: {number}
+              <button
+                className="deleteBtn"
+                type="button"
+                onClick={() => onDeleteProp(id)}
+              >
+                Delete
+              </button>
             </li>
           );
         })}
