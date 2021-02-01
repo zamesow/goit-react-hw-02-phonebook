@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Filter.module.css';
+import mc from './Filter.module.css';
 
 const Filter = ({ value, filterProp }) => (
-  <label className="ContactForm">
+  <label className={mc.ContactForm}>
     Find contacts by name
     <input
-      className="FeilterForm__text"
+      className={mc.FeilterForm__text}
       type="text"
       value={value}
       onChange={filterProp}

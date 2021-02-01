@@ -1,17 +1,17 @@
 import React from 'react';
-import './ContactList.module.css';
+import mc from './ContactList.module.css';
 
 function ContactList({ contactsProp, onDeleteProp, children }) {
   return (
-    <div className="ContactList">
+    <div className={mc.ContactList}>
       {children}
-      <ul className="ContactList__form">
+      <ul className={mc.ContactList__form}>
         {contactsProp.map(({ id, number, name }) => {
           return (
-            <li key={id} className="contact">
+            <li key={id} className={mc.contact}>
               {name}: {number}
               <button
-                className="deleteBtn"
+                className={mc.deleteBtn}
                 type="button"
                 onClick={() => onDeleteProp(id)}
               >

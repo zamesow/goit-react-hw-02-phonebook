@@ -3,7 +3,7 @@ import shortid from 'shortid';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
-import './App.module.css';
+import mc from './App.module.css';
 
 class App extends Component {
   state = {
@@ -70,10 +70,10 @@ class App extends Component {
 
     return (
       <>
-        <h1 className="title">Phonebook</h1>
+        <h1 className="mc.title">Phonebook</h1>
         <ContactForm onSubmitProp={this.formSubmitHandler} />
 
-        <h2 className="title">Contacts</h2>
+        <h2 className="mc.title">Contacts</h2>
         <ContactList
           contactsProp={this.getVisibleContacts()}
           onDeleteProp={this.deleteContact}
