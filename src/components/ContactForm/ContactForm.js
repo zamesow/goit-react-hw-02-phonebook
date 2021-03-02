@@ -46,7 +46,7 @@ class ContactForm extends Component {
             Number
             <input
               className={mc.ContactForm__text}
-              type="text"
+              type="tel"
               value={this.state.number}
               onChange={this.handlePhoneChange}
             />

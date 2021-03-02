@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import mc from './Filter.module.css';
 
 const Filter = ({ value, filterProp }) => (
