@@ -20,6 +20,13 @@ class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
+    const { name, number } = this.state;
+
+    if (!name || !number) {
+      alert('You try submit empty field, please add Name or Number');
+      return;
+    }
+
     this.props.onSubmitProp(this.state);
 
     this.reset();

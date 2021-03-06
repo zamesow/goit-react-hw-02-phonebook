@@ -22,7 +22,7 @@ class App extends Component {
 
     if (
       contacts.find(
-        contact => contact.name.toLocaleLowerCase() === name.toLowerCase(),
+        contact => contact.name.toLowerCase() === name.toLowerCase(),
       )
     ) {
       alert(`${data.name} is already in contacts.`);
@@ -65,6 +65,7 @@ class App extends Component {
       contacts: contacts.filter(contact => contact.id !== contactId),
     }));
   };
+
   render() {
     const { filter } = this.state;
 
@@ -75,8 +76,8 @@ class App extends Component {
 
         <h2 className={mc.title}>Contacts</h2>
         <ContactList
-          contactsProp={this.getVisibleContacts()}
-          onDeleteProp={this.deleteContact}
+          contacts={this.getVisibleContacts()}
+          onDelete={this.deleteContact}
         >
           <Filter value={filter} filterProp={this.changeFilter} />
         </ContactList>
